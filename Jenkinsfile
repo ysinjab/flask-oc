@@ -1,12 +1,9 @@
 pipeline {
   agent { label ""}
   stages {
-    stage('Test') {
+    stage('Build and Deploy to Dev') {
       steps {
-          sh """
-          echo hi test
-          """
-
+          openshiftBuild(namespace:'ysinjab-dev', buildConfig: 'flask-oc',showBuildLogs:'true', waitTime: '3000000') 
       }
     }    
   }
