@@ -6,9 +6,8 @@ pipeline {
           sh """
           echo hi test
           """
-          
+
       }
     }    
   }
 }
-
