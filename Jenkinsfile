@@ -9,7 +9,7 @@ pipeline {
         script{
                   openshift.withCluster() { openshift.withProject('ysinjab-dev') { 
                     echo "Hello from project ${openshift.project()} in cluster ${openshift.cluster()}"
-                    openshift.startBuild('flask-oc', waitTime: '3000000', showBuildLogs:'true')
+                    openshift.startBuild('--from-build=flask-oc')
                   }}
         }
       }
