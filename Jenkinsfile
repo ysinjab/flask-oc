@@ -1,3 +1,5 @@
+@Library('github.com/fabric8io/fabric8-pipeline-library@master') _
+
 pipeline {
   agent { label ""}
   stages {
