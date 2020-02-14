@@ -5,5 +5,9 @@ app = Flask(__name__)
 def hello_world():
     return 'Flask Dockerized 222'
 
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=8080)
+# run the app.
+if __name__ == "__main__":
+    # Setting debug to True enables debug output. This line should be
+    # removed before deploying a production app.
+    app.debug = True
+    app.run()
